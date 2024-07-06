@@ -1,0 +1,53 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
+}
+
+model FanComment {
+  id         Int               @id @default(autoincrement())
+  name       String?           @db.VarChar(50)
+  comment    String?           @db.Text
+  created_at DateTime?
+  replies    FanCommentReply[]
+}
+
+model FanCommentReply {
+  id         Int       @id @default(autoincrement())
+  comment_id Int?
+  fan_name   String?   @db.VarChar(50)
+  fan_reply  String?   @db.Text
+  created_at DateTime?
+
+  comment FanComment? @relation(fields: [comment_id], references: [id])
+}
+
+model Schedule {
+  id       Int      @id @default(autoincrement())
+  date     DateTime
+  time     String
+  opponent String
+  venue    String
+}
+
+model Player {
+  id              Int      @id @default(autoincrement())
+  name            String
+  rank            Int
+  position        String
+  age             Int
+  start_date      DateTime
+  google_image_url String
+}
+
+model Results {
+  id              Int      @id @default(autoincrement())
+  date            DateTime
+  opponent        String
+  score           String
+  highlights_url  String
+}
