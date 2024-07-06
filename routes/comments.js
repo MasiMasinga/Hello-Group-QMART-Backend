@@ -9,7 +9,6 @@ router.get('/schedule', async (req, res) => {
         const schedule = await prisma.schedule.findMany();
         res.json(schedule);
     } catch (error) {
-        console.error('Error fetching schedule data:', error);
         res.status(500).json({ error: 'Failed to fetch schedule data.' });
     };
 });
@@ -19,7 +18,6 @@ router.get('/players', async (req, res) => {
         const players = await prisma.player.findMany();
         res.json(players);
     } catch (error) {
-        console.error('Error fetching player data:', error);
         res.status(500).json({ error: 'Failed to fetch player data.' });
     };
 });
@@ -29,7 +27,6 @@ router.get('/results', async (req, res) => {
         const results = await prisma.results.findMany();
         res.json(results);
     } catch (error) {
-        console.error('Error fetching result data:', error);
         res.status(500).json({ error: 'Failed to fetch result data.' });
     };
 });
