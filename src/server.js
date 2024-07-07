@@ -1,9 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const commentRoutes = require('../routes/comments');
-const { PrismaClient } = require('@prisma/client');
+require('@prisma/client');
 
-const prisma = new PrismaClient();
 const app = express();
 
 app.use(express.json());
