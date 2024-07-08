@@ -1,28 +1,33 @@
 # hello_group_qmart_backend
 
-
 This project is a Node.js and Express backend application using Prisma ORM and PostgreSQL. It provides APIs for managing comments, replies, schedules, players, and match highlights for the Assessment.
 
 ## Clone the Repository
+
 ```js
     git clone https://github.com/MasiMasinga/Hello-Group-Qmart-Backend.git
     cd Hello-Group-Qmart-Backend
 ```
 
 ## Install Dependencies
+
 ```js
     npm install
 ```
 
 ## Running the App
+
 ```js
     npm start
 ```
 
 ## API Endpoints
+
 ### Add a Comment
+
 URL: /api/
 Method: POST
+
 ```js
     Body:
     {
@@ -32,6 +37,7 @@ Method: POST
 ```
 
 Success Response:
+
 ```js
 {
     "id": 1,
@@ -42,9 +48,11 @@ Success Response:
 ```
 
 ### Reply to a Comment
+
 URL: /api/:comment_id/replies
 Method: POST
 Body:
+
 ```js
 {
     "fan_name": "Another Fan",
@@ -52,7 +60,9 @@ Body:
     "created_at": "2024-06-28T12:30:00Z"
 }
 ```
+
 Success Response:
+
 ```js
 {
     "id": 1,
@@ -64,9 +74,11 @@ Success Response:
 ```
 
 ### Get All Comments and Replies
+
 URL: /api/
 Method: GET
 Success Response:
+
 ```js
 [
     {
@@ -89,9 +101,11 @@ Success Response:
 ```
 
 ### Get Comments and Replies by Comment ID
+
 URL: /api/:comment_id
 Method: GET
 Success Response:
+
 ```js
 {
     "id": 1,
@@ -111,9 +125,11 @@ Success Response:
 ```
 
 ### Get Schedule
+
 URL: /api/schedule
 Method: GET
 Success Response:
+
 ```js
 [
     {
@@ -127,9 +143,11 @@ Success Response:
 ```
 
 ### Get Players
+
 URL: /api/players
 Method: GET
 Success Response:
+
 ```js
 [
     {
@@ -145,9 +163,11 @@ Success Response:
 ```
 
 ### Get Match Results
+
 URL: /api/results
 Method: GET
 Success Response:
+
 ```js
 [
     {
