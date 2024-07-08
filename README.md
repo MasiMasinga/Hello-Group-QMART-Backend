@@ -2,6 +2,10 @@
 
 This project is a Node.js and Express backend application using Prisma ORM and PostgreSQL. It provides APIs for managing comments, replies, schedules, players, and match highlights for the Assessment.
 
+## API URL
+- http://13.244.78.89:3000/api
+
+
 ## Clone the Repository
 
 ```js
