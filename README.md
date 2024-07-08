@@ -1,23 +1,23 @@
 # hello_group_qmart_backend
 
 
-This project is a Node.js and Express backend application using Prisma ORM and PostgreSQL. It provides APIs for managing comments, replies, schedules, players, and match highlights for the Chiefs Assessment app.
+This project is a Node.js and Express backend application using Prisma ORM and PostgreSQL. It provides APIs for managing comments, replies, schedules, players, and match highlights for the Assessment.
 
 ## Clone the Repository
-    ```bash
-    git clone https://github.com/your-username/chiefs-assessment-backend.git
-    cd chiefs-assessment-backend
-    ```
+```js
+    git clone https://github.com/MasiMasinga/Hello-Group-Qmart-Backend.git
+    cd Hello-Group-Qmart-Backend
+```
 
 ## Install Dependencies
-    ```bash
+```js
     npm install
-    ```
+```
 
 ## Running the App
-    ```bash
+```js
     npm start
-    ```
+```
 
 ## API Endpoints
 ### Add a Comment
